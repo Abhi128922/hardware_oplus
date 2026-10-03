@@ -82,6 +82,7 @@ aidl_interface {
     name: "vendor.oplus.hardware.camera_rfi",
     system_ext_specific: true,
     vendor_available: true,
+    odm_available: true,
     local_include_dir: "aidl",
     srcs: ["aidl/vendor/oplus/hardware/camera_rfi/*.aidl"],
     stability: "vintf",
@@ -115,6 +116,7 @@ aidl_interface {
     name: "vendor.oplus.hardware.cameraextension",
     system_ext_specific: true,
     odm_available: true,
+    vendor_available: true,
     local_include_dir: "aidl",
     srcs: ["aidl/vendor/oplus/hardware/cameraextension/*.aidl"],
     stability: "vintf",
@@ -140,6 +142,7 @@ aidl_interface {
     name: "vendor.oplus.hardware.cammidasservice",
     system_ext_specific: true,
     vendor_available: true,
+    odm_available: true,
     local_include_dir: "aidl",
     srcs: ["aidl/vendor/oplus/hardware/cammidasservice/*.aidl"],
     stability: "vintf",
@@ -226,6 +229,7 @@ aidl_interface {
     name: "vendor.oplus.hardware.commondcs",
     system_ext_specific: true,
     vendor_available: true,
+    odm_available: true,
     local_include_dir: "aidl",
     srcs: ["aidl/vendor/oplus/hardware/commondcs/*.aidl"],
     stability: "vintf",
@@ -251,6 +255,7 @@ aidl_interface {
     name: "vendor.oplus.hardware.communicationcenter",
     system_ext_specific: true,
     vendor_available: true,
+    odm_available: true,
     local_include_dir: "aidl",
     srcs: ["aidl/vendor/oplus/hardware/communicationcenter/*.aidl"],
     stability: "vintf",
@@ -277,35 +282,6 @@ aidl_interface {
     ],
 }
 
-aidl_interface {
-    name: "vendor.oplus.hardware.cwb",
-    system_ext_specific: true,
-    odm_available: true,
-    local_include_dir: "aidl",
-    srcs: ["aidl/vendor/oplus/hardware/cwb/*.aidl"],
-    stability: "vintf",
-    owner: "oplus",
-
-    backend: {
-        cpp: {
-            enabled: true,
-        },
-        java: {
-            enabled: false,
-        },
-    },
-    versions_with_info: [
-        {
-            version: "1",
-            imports: [],
-        },
-        {
-            version: "2",
-            imports: [],
-        },
-
-    ],
-}
 
 aidl_interface {
     name: "vendor.oplus.hardware.displaycolorfeature",
@@ -628,6 +604,7 @@ aidl_interface {
     name: "vendor.oplus.hardware.sendextcamcmd",
     system_ext_specific: true,
     odm_available: true,
+    vendor_available: true,
     local_include_dir: "aidl",
     srcs: ["aidl/vendor/oplus/hardware/sendextcamcmd/*.aidl"],
     stability: "vintf",
@@ -881,6 +858,7 @@ cc_defaults {
     shared_libs: ["libbinder_ndk"],
     system_ext_specific: true,
     vendor_available: true,
+    odm_available: true,
 }
 
 cc_library_shared {
