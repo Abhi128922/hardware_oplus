@@ -16,6 +16,8 @@ android_app {
 
     static_libs: [
         "SettingsLib",
+        "SettingsLibCollapsingToolbarBaseActivity",
+        "androidx.preference_preference",
     ],
 
     optimize: {
